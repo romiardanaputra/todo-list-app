@@ -11,7 +11,7 @@
       <div class="container">
          <div class="todo-card">
             <h1>Todo List</h1>
-            <form action="#" class="todo-form">
+            <div class="todo-form">
                <label for="add-task"></label>
                <input
                   type="text"
@@ -23,15 +23,17 @@
                <button class="btn-add">
                   <i class="icon-add" data-feather="plus"></i>
                </button>
-            </form>
-            <p class="task-completed">[number] of task(s) completed</p>
+            </div>
+            <div class="task-list-container">
+               <p class="task-completed">
+                  <span class="task-count">[number]</span> of task(s) completed
+               </p>
+            </div>
          </div>
          <div class="error-handling">
             <p>Input Can Not Be Empty</p>
          </div>
       </div>
-      <script>
-         feather.replace();
-      </script>
+      <script src="index.js"></script>
    </body>
 </html>
