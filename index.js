@@ -19,17 +19,25 @@ const addTask = () => {
       }, 200);
       return;
    }
+   const taskList = createTaskListElement(taskName);
+   taskListContainer.insertAdjacentHTML("beforeend", taskList);
+};
 
-   const taskList = `
+const createTaskListElement = (taskName) => {
+   return `
    <div class="task-list">
        <input type="checkbox" class="task-check"/>
        <span class="task-name">${taskName}</span>
-       <button class="edit-button"><i data-feather="edit-3"></i></button>
-       <button class="delete-button"><i data-feather="x"></i></button>
+       <button class="edit-button">Edit</button>
+       <button class="delete-button" onclick="deleteTask(this)">Delete</button>
    </div>
-`;
+   `;
+};
 
-   taskListContainer.insertAdjacentHTML("beforeend", taskList);
+const deleteTask = (button) => {
+   button.parentNode.remove();
+   counter = -1;
+   displayTaskCounter(counter);
 };
 
 addButton.addEventListener("click", addTask);
