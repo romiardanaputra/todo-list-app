@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-:root{
-    --brown-color: #5c5552;
-    --rounded-sm: 5px;
-    --todo-w-card: 30%;
+:root {
+   --brown-color: #5c5552;
+   --rounded-sm: 5px;
+   --todo-w-card: 30%;
 }
 
 * {
@@ -14,114 +14,113 @@
 }
 
 body {
-	background: #ffd2a6;
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+   background: #ffd2a6;
+   background-size: 400% 400%;
+   animation: gradient 15s ease infinite;
+   height: 100vh;
 }
 
-
-.container{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+.container {
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
 }
 
-.todo-card{
-    width: var(--todo-w-card);
-    min-height: 400px;
-    background-color: #fff;
-    border-radius: var(--rounded-sm);
-    padding: 40px 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+.todo-card {
+   width: var(--todo-w-card);
+   min-height: 400px;
+   background-color: #fff;
+   border-radius: var(--rounded-sm);
+   padding: 40px 30px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-input[name="add-task"]{
-    padding: 15px;
-    width: 100%;
-    border-radius: 5px;
-    border-style: none;
-    border: 1px solid var(--brown-color);
+input[name="add-task"] {
+   padding: 15px;
+   width: 100%;
+   border-radius: 5px;
+   border-style: none;
+   border: 1px solid var(--brown-color);
 }
 
-input[name="add-task"]:focus{
-    outline: 1px solid var(--brown-color);
+input[name="add-task"]:focus {
+   outline: 1px solid var(--brown-color);
 }
 
-.todo-form{
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
-}   
+.todo-form {
+   width: 100%;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 10px;
+}
 
-.btn-add{
-    border-style: none;
-    background-color: var(--brown-color);
-    color: #fff;
-    padding: 10px;
-    border-radius: var(--rounded-sm);
-    cursor: pointer;
+.btn-add {
+   border-style: none;
+   background-color: var(--brown-color);
+   color: #fff;
+   padding: 10px;
+   border-radius: var(--rounded-sm);
+   cursor: pointer;
 }
 
 .icon-add {
-    width: 25px;
-    height: 25px;
+   width: 25px;
+   height: 25px;
 }
 
-h1{
-    padding-left: 10px;
-    margin-bottom: 10px;
+h1 {
+   padding-left: 10px;
+   margin-bottom: 10px;
 }
 
-.error-handling{
-    padding: 10px ;
+.error-handling {
+   padding: 10px;
 }
 
-.error-handling{
-    background-color:#F44336;
-    padding-block: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--todo-w-card);
-    color: #fff;
-    font-weight: 700;
-    display: none;
-    border-radius: var(--rounded-sm);
-    text-align: center;
+.error-handling {
+   background-color: #f44336;
+   padding-block: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: var(--todo-w-card);
+   color: #fff;
+   font-weight: 700;
+   display: none;
+   border-radius: var(--rounded-sm);
+   text-align: center;
 }
 
-.edit-button, .delete-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+.edit-button,
+.delete-button {
+   background-color: #3498db;
+   color: #fff;
+   border: none;
+   padding: 5px 10px;
+   cursor: pointer;
 }
 
-.task-list{
-    background-color: var(--brown-color);
-    padding: 20px;
-    border-radius: var(--rounded-sm);
-    color: #fff;
-    margin-block: 10px;
+.task-list {
+   background-color: var(--brown-color);
+   padding: 20px;
+   border-radius: var(--rounded-sm);
+   color: #fff;
+   margin-block: 10px;
 }
 
-.task-list-container{
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    gap: 20px;
+.task-list-container {
+   display: flex;
+   flex-direction: column;
+   padding-left: 10px;
 }
-.task-completed{
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 14px;
+.task-completed {
+   margin-top: 10px;
+   margin-bottom: 40px;
+   font-weight: 700;
+   font-size: 14px;
 }
