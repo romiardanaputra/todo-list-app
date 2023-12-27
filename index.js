@@ -28,15 +28,18 @@ const createTaskListElement = (taskName) => {
    <div class="task-list">
        <input type="checkbox" class="task-check"/>
        <span class="task-name">${taskName}</span>
-       <button class="edit-button">Edit</button>
-       <button class="delete-button" onclick="deleteTask(this)">Delete</button>
+       <div class="btn-wrappers">
+         <button class="edit-button">Edit</button>
+         <button class="delete-button" onclick="deleteTask(this)">Delete</button>
+       </div>
    </div>
    `;
 };
 
 const deleteTask = (button) => {
-   button.parentNode.remove();
-   counter = -1;
+   const taskList = button.closest(".task-list");
+   taskList.remove();
+   counter--;
    displayTaskCounter(counter);
 };
 
