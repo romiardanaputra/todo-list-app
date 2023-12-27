@@ -21,6 +21,7 @@ const addTask = () => {
    }
    const taskList = createTaskListElement(taskName);
    taskListContainer.insertAdjacentHTML("beforeend", taskList);
+   taskInputField.value = "";
 };
 
 const createTaskListElement = (taskName) => {
@@ -29,18 +30,26 @@ const createTaskListElement = (taskName) => {
        <input type="checkbox" class="task-check"/>
        <span class="task-name">${taskName}</span>
        <div class="btn-wrappers">
-         <button class="edit-button">Edit</button>
+         <button class="edit-button" onclick="editTask(this)">Edit</button>
          <button class="delete-button" onclick="deleteTask(this)">Delete</button>
        </div>
    </div>
    `;
 };
 
-const deleteTask = (button) => {
-   const taskList = button.closest(".task-list");
+const deleteTask = (deleteButton) => {
+   const taskList = deleteButton.closest(".task-list");
    taskList.remove();
    counter--;
    displayTaskCounter(counter);
+};
+
+const editTask = (editButton) => {
+   const taskList = editButton.closest(".task-list");
+   const taskName = taskList.querySelector(".task-name");
+   taskInputField.value = taskName?.innerText;
+   taskList.remove();
+   console.log(taskInputField.value);
 };
 
 addButton.addEventListener("click", addTask);
